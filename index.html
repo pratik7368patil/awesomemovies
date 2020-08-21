@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="icon" href="./images/title.svg" type="image/svg">
+
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <title>Osm Movies</title>
+  </head>
+  <body>
+
+    <a href="javascript:void(0)" onclick="checkDark()">
+      <svg width="40px" height="40px" viewBox="0 0 16 16" id="dark-mode" class="bi bi-brightness-high-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
+        <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </svg>
+    </a>
+
+    <nav class="navbar navbar-expand-lg navbar-light" id="bar" data-spy="affix" data-offset-top="400">
+      <div class="#">
+        <a class="navbar-brand" href="#">
+          <span class="head_size">Osm Movies</span>
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#all_movies">All Movies</a>
+          </li>            
+        </ul>
+      </div>
+    </nav>
+    
+    <section class="#">
+      <div id="main-carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#main-carousel" data-slide-to="1"></li>
+          <li data-target="#main-carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="pickgradient">
+              <img src="./images/mi2.jpg" class="img-fluid main-img" alt="fast and furious">
+            </div>
+            <div class="carousel-caption">
+              <h2>Mission: Impossible</h2>
+              <p>Fallout is a 2018 American action spy film written, produced, and directed by Christopher McQuarrie.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="pickgradient">
+              <img src="./images/kgf3.jpg" class="img-fluid main-img" alt="...">
+            </div>
+            <div class="carousel-caption">
+              <h2>KGF : Chapter 1</h2>
+              <p>In the 1970s, a fierce rebel rises against brutal oppression and becomes the symbol of hope to legions of downtrodden people.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="pickgradient">
+              <img src="./images/pi1.jpg" class="img-fluid main-img" alt="...">
+            </div>
+            <div class="carousel-caption">
+              <h2>Pirates of the Caribbean</h2>
+              <p>Pirates of the Caribbean is a series of fantasy swashbuckler films produced by Jerry Bruckheimer and based on Walt Disney's theme park attraction of the same name. </p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#main-carousel" role="button" data-slide="prev">
+          <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-arrow-left-circle-fill" fill="#fc0" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.646 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L6.207 7.5H11a.5.5 0 0 1 0 1H6.207l2.147 2.146z"/>
+          </svg>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#main-carousel" role="button" data-slide="next">
+          <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-arrow-right-circle-fill" fill="#fc0" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8.354 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L9.793 7.5H5a.5.5 0 0 0 0 1h4.793l-2.147 2.146z"/>
+          </svg>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="container">
+      <header id="all_movies">
+        <div class="main-head">
+          <h1>All Awesome Movies</h1>
+          <span></span>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 d-flex mt-2 mb-2">
+  
+              <div class="card flex-fill">
+                <picture>
+                  <a href="./src/darkknight.html" target="_blank">
+                    <img src="./images/darkknight.jpeg" class="card-img-top" alt="batman" />
+                  </a>
+                </picture>
+                <div class="card-body">
+                  <a href="./src/darkknight.html" target="_blank"><h5>The Dark Knight Raises</h5></a>
+                </div>
+                <div class="card-footer">
+                  <a href="#" target="_blank" class="btn custom-btn" data-toggle="modal" data-target="#darkknight" >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-play-fill" fill="royalblue" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+            <!--Modal for Dark Knight-->
+            <div class="#">
+              <!-- Modal -->
+              <div class="modal fade" id="darkknight" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <object width="100%" height="450">
+                      <param name="movie" value="https://www.youtube-nocookie.com/embed/g8evyE9TuYk">
+                      <embed src="https://www.youtube-nocookie.com/embed/g8evyE9TuYk" type="application/x-shockwave-flash" width="100%" height="333">
+                    </object>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex mt-2 mb-2">
+            
+              <div class="card flex-fill">
+                <picture>
+                  <a href="./src/deadpool.html" target="_blank">
+                    <img src="./images/deadpool.jpeg" class="card-img-top" alt="deadpool" />
+                  </a>
+                </picture>
+                <div class="card-body">
+                  <a href="./src/deadpool.html" target="_blank"><h5>Deadpool</h5></a>
+                </div>
+                <div class="card-footer">
+                  <a href="#" target="_blank" class="btn card-btn" data-toggle="modal" data-target="#deadpool">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-play-fill" fill="royalblue" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+            <!--Modal for Deadpool-->
+            <div class="#">
+              <!-- Modal -->
+              <div class="modal fade" id="deadpool" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <object width="100%" height="450">
+                      <param name="movie" value="https://www.youtube-nocookie.com/embed/D86RtevtfrA">
+                      <embed src="https://www.youtube-nocookie.com/embed/D86RtevtfrA" type="application/x-shockwave-flash" width="100%" height="333">
+                    </object>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex mt-2 mb-2">
+              <div class="card flex-fill">
+                <picture>
+                  <a href="./src/fallout.html" target="_blank">
+                    <img src="./images/fallout.jpg" class="card-img-top" alt="mi-fallout" />
+                  </a>
+                </picture>
+                <div class="card-body">
+                  <a href="./src/fallout.html" target="_blank"><h5>MI : Fallout</h5></a>
+                </div>
+                <div class="card-footer">
+                  <a href="#" target="_blank" class="btn custom-btn" data-toggle="modal" data-target="#fallout">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-play-fill" fill="royalblue" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+            <!--Modal for fallout-->
+            <div class="#">
+              <!-- Modal -->
+              <div class="modal fade" id="fallout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <object width="100%" height="450">
+                      <param name="movie" value="https://www.youtube-nocookie.com/embed/wb49-oV0F78">
+                      <embed src="https://www.youtube-nocookie.com/embed/wb49-oV0F78" type="application/x-shockwave-flash" width="100%" height="333">
+                    </object>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex mt-2 mb-2">
+            <a href="./src/fast.html" target="_blank">
+              <div class="card flex-fill">
+                <picture>
+                  <img src="./images/fastandfu.jpg" class="card-img-top" alt="fast" />
+                </picture>
+                <div class="card-body">
+                  <h5>Fast and Furious</h5>
+                </div>
+                <div class="card-footer">
+                  <a href="#" target="_blank" class="btn card-btn" data-toggle="modal" data-target="#fast">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-play-fill" fill="royalblue" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </a>
+
+            <!--Modal for fast-->
+            <div class="#">
+              <!-- Modal -->
+              <div class="modal fade" id="fast" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <object width="100%" height="450">
+                      <param name="movie" value="https://www.youtube-nocookie.com/embed/dKi5XoeTN0k">
+                      <embed src="https://www.youtube-nocookie.com/embed/dKi5XoeTN0k" type="application/x-shockwave-flash" width="100%" height="333">
+                    </object>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!--Second Row-->
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6 d-flex mt-2 mb-2">
+            <div class="card flex-fill">
+              <picture>
+                <img src="./images/ipman.jpeg" class="card-img-top" alt="ipman" />
+              </picture>
+              <div class="card-body">
+                <h5>IP Man</h5>
+              </div>
+              <div class="card-footer">
+                <a href="#" target="_blank" class="btn card-btn" data-toggle="modal" data-target="#ipman">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-play-fill" fill="royalblue" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!--Modal for ipman-->
+            <div class="#">
+              <!-- Modal -->
+              <div class="modal fade" id="ipman" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <object width="100%" height="450">
+                      <param name="movie" value="https://www.youtube-nocookie.com/embed/jckXscMwIOI">
+                      <embed src="https://www.youtube-nocookie.com/embed/jckXscMwIOI" type="application/x-shockwave-flash" width="100%" height="333">
+                    </object>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex mt-2 mb-2">
+            <div class="card flex-fill">
+              <picture>
+                <img src="./images/kgf.jpeg" class="card-img-top" alt="kgf" />
+              </picture>
+              <div class="card-body">
+                <h5>KGF : Chapter 1</h5>
+              </div>
+              <div class="card-footer">
+                <a href="#" target="_blank" class="btn custom-btn" data-toggle="modal" data-target="#kgf">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-play-fill" fill="royalblue" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!--Modal for kgf-->
+            <div class="#">
+              <!-- Modal -->
+              <div class="modal fade" id="kgf" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <object width="100%" height="450">
+                      <param name="movie" value="https://www.youtube-nocookie.com/embed/-KfsY-qwBS0">
+                      <embed src="https://www.youtube-nocookie.com/embed/-KfsY-qwBS0" type="application/x-shockwave-flash" width="100%" height="333">
+                    </object>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex mt-2 mb-2">
+            <div class="card flex-fill">
+              <picture>
+                <img src="./images/pirets.jpeg" class="card-img-top" alt="Pirates" />
+              </picture>
+              <div class="card-body">
+                <h5>Pirates</h5>
+              </div>
+              <div class="card-footer">
+                <a href="#" target="_blank" class="btn card-btn" data-toggle="modal" data-target="#pirates">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-play-fill" fill="royalblue" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!--Modal for pirates-->
+            <div class="#">
+              <!-- Modal -->
+              <div class="modal fade" id="pirates" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <object width="100%" height="450">
+                      <param name="movie" value="https://www.youtube-nocookie.com/embed/naQr0uTrH_s">
+                      <embed src="https://www.youtube-nocookie.com/embed/naQr0uTrH_s" type="application/x-shockwave-flash" width="100%" height="333">
+                    </object>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex mt-2 mb-2">
+            <div class="card flex-fill">
+              <picture>
+                <img src="./images/TheGodfather.jpg" class="card-img-top" alt="godfather" />
+              </picture>
+              <div class="card-body">
+                <h5>The Godfather</h5>
+              </div>
+              <div class="card-footer">
+                <a href="#" target="_blank" class="btn custom-btn" data-toggle="modal" data-target="#godfather">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-play-fill" fill="royalblue" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!--Modal for godfather-->
+            <div class="#">
+              <!-- Modal -->
+              <div class="modal fade" id="godfather" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <object width="100%" height="450">
+                      <param name="movie" value="https://www.youtube-nocookie.com/embed/sY1S34973zA">
+                      <embed src="https://www.youtube-nocookie.com/embed/sY1S34973zA" type="application/x-shockwave-flash" width="100%" height="333">
+                    </object>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+    
+
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="js/index.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
