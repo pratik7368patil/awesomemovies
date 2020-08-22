@@ -56,6 +56,12 @@ body {
 }
 
 
+@media (max-width: 400px) {
+  .modal-content {
+    height: 300px;
+  }
+}
+
 @media (max-width: 650px) {
 	.head_size {
 		font-size: 20px;
